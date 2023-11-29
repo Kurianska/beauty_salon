@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="beauty_salon_employee_reschedule_wizard_form" model="ir.ui.view">
+        <field name="name">beauty.salon.employee.reschedule.wizard.form</field>
+        <field name="model">beauty.salon.employee.reschedule.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="schedule_id"/>
+                    <field name="new_date"/>
+                    <field name="new_start_time"/>
+                    <field name="new_end_time"/>
+                    <field name="new_employee_id"/>
+                </group>
+                <footer>
+                    <button string="Reschedule"
+                            type="object"
+                            class="btn-primary"
+                            name="action_reschedule"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_reschedule_visit_wizard" model="ir.actions.act_window">
+        <field name="name">Reschedule Employee Working Time</field>
+        <field name="res_model">beauty.salon.employee.reschedule.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="beauty_salon_employee_reschedule_wizard_form"/>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="beauty_salon.model_beauty_salon_employee_schedule"/>
+        <field name="binding_view_types">list,form</field>
+        <field name="binding_type">action</field>
+    </record>
+</odoo>

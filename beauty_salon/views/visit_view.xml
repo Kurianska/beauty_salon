@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="beauty_salon_client_visit_tree" model="ir.ui.view">
+        <field name="name">beauty.salon.client.visit.tree</field>
+        <field name="model">beauty.salon.client.visit</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="visit_date" widget="datetime"/>
+                <field name="employee_id" widget="many2one_tags"/>
+                <field name="client_id" widget="many2one_tags"/>
+                <field name="service_type"/>
+                 <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="beauty_salon_client_visit_form" model="ir.ui.view">
+        <field name="name">beauty.salon.client.visit.form</field>
+        <field name="model">beauty.salon.client.visit</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_show_reschedule_wizard" string="Reschedule Visit" type="object" class="oe_highlight"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,done" />
+                </header>
+                <sheet>
+                    <group>
+                        <field name="visit_date" widget="date"/>
+                        <field name="visit_start_time"/>
+                        <field name="visit_end_time"/>
+                        <field name="employee_id" widget="many2one_tags"/>
+                        <field name="client_id" widget="many2one_tags"/>
+                        <field name="service_type"/>
+                        <field name="state"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="beauty_salon_client_visit_act_window" model="ir.actions.act_window">
+        <field name="name">Visits</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">beauty.salon.client.visit</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="beauty_salon_client_visit_menu"
+              action="beauty_salon_client_visit_act_window"
+              parent="beauty_salon_main_menu"
+              sequence="5"/>
+
+</odoo>

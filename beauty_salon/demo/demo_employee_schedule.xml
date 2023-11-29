@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="employee_schedule_1" model="beauty.salon.employee.schedule">
+        <field name="employee_id" ref="beauty_salon.employee_hair_stylist_1"/>
+        <field name="appointment_date">2023-12-01</field>
+        <field name="appointment_start_time">09.0</field>
+        <field name="appointment_end_time">14.0</field>
+        <field name="service_type">haircut</field>
+    </record>
+
+    <record id="employee_schedule_2" model="beauty.salon.employee.schedule">
+        <field name="employee_id" ref="beauty_salon.employee_nail_technician_1"/>
+        <field name="appointment_date">2023-12-02</field>
+        <field name="appointment_start_time">14.0</field>
+        <field name="appointment_end_time">19.0</field>
+        <field name="service_type">nail_care</field>
+    </record>
+
+    <record id="employee_schedule_3" model="beauty.salon.employee.schedule">
+        <field name="employee_id" ref="beauty_salon.employee_massage_therapist_2"/>
+        <field name="appointment_date">2023-12-03</field>
+        <field name="appointment_start_time">14.0</field>
+        <field name="appointment_end_time">19.0</field>
+        <field name="service_type">massage</field>
+    </record>
+
+    <record id="employee_schedule_4" model="beauty.salon.employee.schedule">
+        <field name="employee_id" ref="beauty_salon.employee_makeup_artist_2"/>
+        <field name="appointment_date">2023-12-04</field>
+        <field name="appointment_start_time">09.0</field>
+        <field name="appointment_end_time">14.0</field>
+        <field name="service_type">makeup</field>
+    </record>
+
+</odoo>

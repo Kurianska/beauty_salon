@@ -1,0 +1,75 @@
+<odoo>
+
+    <template id="beauty_salon_content_employee_schedule">
+        <t t-foreach="docs" t-as="doc">
+            <style type="text/css">
+                .custom-table {
+                    width: 100%;
+                    border-collapse: collapse;
+                }
+                .custom-table th, .custom-table td {
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                }
+                .custom-table th {
+                    text-align: left;
+                    background-color: #f2f2f2;
+                }
+                .custom-table tr:nth-child(even) {
+                    background-color: #f9f9f9;
+                }
+                .custom-table tr:hover {
+                    background-color: #ddd;
+                }
+                .custom-table .highlight {
+                    font-weight: bold;
+                }
+            </style>
+
+            <div class="oe_structure"/>
+            <div class="col-xs-12 text-center">
+                <h2>Employee Schedule Report</h2>
+            </div>
+            <div class="row mt16 mb16">
+                <div class="offset-6 col-xs-6">
+                    <strong>Employee:</strong><span t-field="doc.employee_id.name"/>
+                </div>
+                <div class="offset-6 col-xs-6">
+                    <strong>Specialty:</strong><span t-field="doc.employee_id.specialty"/>
+                </div>
+            </div>
+
+            <table class="table table-condensed custom-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Service</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><t t-esc="doc.appointment_date"/></td>
+                        <td><t t-esc="doc.appointment_start_time"/></td>
+                        <td><t t-esc="doc.appointment_end_time"/></td>
+                        <td><t t-esc="doc.service_type"/></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="col-xs-12 text-right">
+                <span>Date: <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"/></span>
+            </div>
+        </t>
+    </template>
+
+    <template id="beauty_salon_report_employee_schedule">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="beauty_salon.beauty_salon_content_employee_schedule"/>
+            </t>
+        </t>
+    </template>
+
+</odoo>
+

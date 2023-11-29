@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo noupdate="1">
+
+    <record id="employee_hair_stylist_1" model="beauty.salon.employee">
+        <field name="name">Vitkovska</field>
+        <field name="phone">+38067456789</field>
+        <field name="email">vitkovska@example.com</field>
+        <field name="gender">female</field>
+        <field name="passport_data">AB123456</field>
+        <field name="specialty">hair_stylist</field>
+        <field name="role">mentor</field>
+    </record>
+    <record id="employee_hair_stylist_2" model="beauty.salon.employee">
+        <field name="name">Bogdan</field>
+        <field name="phone">+38067654321</field>
+        <field name="email">bogdan@example.com</field>
+        <field name="gender">male</field>
+        <field name="passport_data">BC123499</field>
+        <field name="specialty">hair_stylist</field>
+        <field name="role">intern</field>
+        <field name="mentor_id" ref="employee_hair_stylist_1"/>
+    </record>
+    <record id="employee_nail_technician_1" model="beauty.salon.employee">
+        <field name="name">Chugai</field>
+        <field name="phone">+38067654399</field>
+        <field name="email">bogdan@example.com</field>
+        <field name="gender">female</field>
+        <field name="passport_data">TT923456</field>
+        <field name="specialty">nail_technician</field>
+        <field name="role">mentor</field>
+    </record>
+        <record id="employee_nail_technician_2" model="beauty.salon.employee">
+        <field name="name">Bojko</field>
+        <field name="phone">+38067622333</field>
+        <field name="email">bojko@example.com</field>
+        <field name="gender">female</field>
+        <field name="passport_data">AK123477</field>
+        <field name="specialty">nail_technician</field>
+        <field name="role">intern</field>
+        <field name="mentor_id" ref="employee_nail_technician_1"/>
+    </record>
+    <record id="employee_massage_therapist_1" model="beauty.salon.employee">
+        <field name="name">Gross</field>
+        <field name="phone">+38067654329</field>
+        <field name="email">gross@example.com</field>
+        <field name="gender">male</field>
+        <field name="passport_data">HB123446</field>
+        <field name="specialty">massage_therapist</field>
+        <field name="role">mentor</field>
+    </record>
+        <record id="employee_massage_therapist_2" model="beauty.salon.employee">
+        <field name="name">Ivanyk</field>
+        <field name="phone">+38067622335</field>
+        <field name="email">ivanyk@example.com</field>
+        <field name="gender">male</field>
+        <field name="passport_data">TK123000</field>
+        <field name="specialty">massage_therapist</field>
+        <field name="role">intern</field>
+        <field name="mentor_id" ref="employee_massage_therapist_1"/>
+    </record>
+        <record id="employee_makeup_artist_1" model="beauty.salon.employee">
+        <field name="name">Mylevych</field>
+        <field name="phone">+38067654000</field>
+        <field name="email">mylevych@example.com</field>
+        <field name="gender">female</field>
+        <field name="passport_data">AE123988</field>
+        <field name="specialty">makeup_artist</field>
+        <field name="role">mentor</field>
+    </record>
+        <record id="employee_makeup_artist_2" model="beauty.salon.employee">
+        <field name="name">Fuchko</field>
+        <field name="phone">+380676873005</field>
+        <field name="email">fuchko@gmail.com</field>
+        <field name="gender">female</field>
+        <field name="passport_data">TK108765</field>
+        <field name="specialty">makeup_artist</field>
+        <field name="role">intern</field>
+        <field name="mentor_id" ref="employee_makeup_artist_1"/>
+    </record>
+
+</odoo>

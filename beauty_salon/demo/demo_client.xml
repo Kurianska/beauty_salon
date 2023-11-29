@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <odoo noupdate="1">
+
+        <record id="client_anna" model="beauty.salon.client">
+            <field name="name">Anna</field>
+            <field name="gender">female</field>
+            <field name="phone">+380980334455</field>
+            <field name="email">anna@example.com</field>
+            <field name="birthday_date">1990/01/01</field>
+        </record>
+
+        <record id="client_olga" model="beauty.salon.client">
+            <field name="name">Olga</field>
+            <field name="gender">female</field>
+            <field name="phone">+380980334400</field>
+            <field name="email">olga@example.com</field>
+            <field name="birthday_date">1990/01/01</field>
+        </record>
+
+        <record id="client_pavlo" model="beauty.salon.client">
+            <field name="name">Pavlo</field>
+            <field name="gender">male</field>
+            <field name="phone">+380983445566</field>
+            <field name="email">pavlo@example.com</field>
+            <field name="birthday_date">1995/05/05</field>
+        </record>
+
+        <record id="client_ivan" model="beauty.salon.client">
+            <field name="name">Ivan</field>
+            <field name="gender">male</field>
+            <field name="phone">+380983445566</field>
+            <field name="email">pavlo@example.com</field>
+            <field name="birthday_date">1995/03/01</field>
+        </record>
+
+    </odoo>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="client_visit_reschedule_wizard_form" model="ir.ui.view">
+        <field name="name">client.visit.reschedule.wizard.form</field>
+        <field name="model">client.visit.reschedule.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Reschedule or Cancel Visit">
+                <group>
+                    <field name="visit_id"/>
+                    <field name="new_visit_date"/>
+                    <field name="new_visit_start_time"/>
+                    <field name="new_visit_end_time"/>
+                    <field name="new_employee_id"/>
+                    <field name="cancel_visit"/>
+                </group>
+                <footer>
+                    <button string="Confirm" type="object" name="action_reschedule_or_cancel" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_client_visit_reschedule_wizard" model="ir.actions.act_window">
+        <field name="name">Reschedule or Cancel Client Visit</field>
+        <field name="res_model">client.visit.reschedule.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="client_visit_reschedule_wizard_form"/>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="beauty_salon.model_beauty_salon_client_visit"/>
+        <field name="binding_view_types">list,form</field>
+        <field name="binding_type">action</field>
+    </record>
+</odoo>

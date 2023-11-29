@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <menuitem id="beauty_salon_main_menu"
+              web_icon="beauty_salon,static/description/icon.png"
+              name="Beauty Salon"
+              sequence="1"/>
+
+</odoo>

@@ -1,0 +1,27 @@
+<odoo>
+        <record id="paperformat_lowmargin" model="report.paperformat">
+            <field name="name">European A4 low margin</field>
+            <field name="default" eval="True" />
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">1</field>
+            <field name="margin_bottom">1</field>
+            <field name="margin_left">1</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">0</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <record id="action_report_employee_schedule" model="ir.actions.report">
+            <field name="name">Employee Schedule Report</field>
+            <field name="model">beauty.salon.employee.schedule</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">beauty_salon.beauty_salon_report_employee_schedule</field>
+            <field name="report_file">beauty_salon.beauty_salon_report_employee_schedule</field>
+            <field name="print_report_name">'Employee Schedule - %s' % (object.employee_id.name)</field>
+        </record>
+
+</odoo>

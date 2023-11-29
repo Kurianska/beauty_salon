@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="employee_schedule_tree" model="ir.ui.view">
+        <field name="name">beauty.salon.employee.schedule.tree</field>
+        <field name="model">beauty.salon.employee.schedule</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="employee_id"/>
+                <field name="appointment_date"/>
+                <field name="appointment_start_time"/>
+                <field name="appointment_end_time"/>
+                <field name="service_type"/>
+                <field name="day_of_week"/>
+                <field name="week_type"/>
+                <button string="Reschedule" type="object" name="action_show_reschedule_wizard"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="employee_schedule_calendar" model="ir.ui.view">
+        <field name="name">beauty.salon.employee.schedule.calendar</field>
+        <field name="model">beauty.salon.employee.schedule</field>
+        <field name="arch" type="xml">
+            <calendar string="Employee Schedule" date_start="appointment_date" color="employee_id">
+                <field name="employee_id"/>
+                <field name="service_type"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="action_employee_schedule_calendar" model="ir.actions.act_window">
+        <field name="name">Employee Schedules</field>
+        <field name="res_model">beauty.salon.employee.schedule</field>
+        <field name="view_mode">tree,calendar</field>
+        <field name="view_id" ref="employee_schedule_calendar"/>
+    </record>
+
+
+    <menuitem id="menu_employee_schedule"
+              name="Employee Schedules"
+              parent="beauty_salon_main_menu"
+              action="action_employee_schedule_calendar"/>
+
+</odoo>

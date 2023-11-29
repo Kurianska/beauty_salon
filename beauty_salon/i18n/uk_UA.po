@@ -1,0 +1,630 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* beauty_salon
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-29 15:12+0000\n"
+"PO-Revision-Date: 2023-11-29 15:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: beauty_salon
+#: model:ir.actions.report,print_report_name:beauty_salon.action_report_employee_schedule
+msgid "'Employee Schedule - %s' % (object.employee_id.name)"
+msgstr ""
+
+#. module: beauty_salon
+#: model_terms:ir.ui.view,arch_db:beauty_salon.beauty_salon_employee_kanban
+msgid "<strong>Clients: </strong>"
+msgstr ""
+
+#. module: beauty_salon
+#: model_terms:ir.ui.view,arch_db:beauty_salon.beauty_salon_content_employee_schedule
+msgid "<strong>Employee:</strong>"
+msgstr ""
+
+#. module: beauty_salon
+#: model_terms:ir.ui.view,arch_db:beauty_salon.beauty_salon_employee_kanban
+msgid "<strong>Specialty: </strong>"
+msgstr ""
+
+#. module: beauty_salon
+#: model_terms:ir.ui.view,arch_db:beauty_salon.beauty_salon_content_employee_schedule
+msgid "<strong>Specialty:</strong>"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client__active
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client_visit__active
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee__active
+#: model:ir.model.fields,field_description:beauty_salon.field_person_mixin__active
+msgid "Active"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client__address
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee__address
+#: model:ir.model.fields,field_description:beauty_salon.field_person_mixin__address
+msgid "Address"
+msgstr "Адреса"
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_schedule__appointment_date
+msgid "Appointment Date"
+msgstr "Дата запису"
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_schedule__appointment_end_time
+msgid "Appointment End Time"
+msgstr "Кінець часу запису"
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_schedule__appointment_start_time
+msgid "Appointment Start Time"
+msgstr "Початок часу запису"
+
+#. module: beauty_salon
+#: model:ir.ui.menu,name:beauty_salon.beauty_salon_main_menu
+msgid "Beauty Salon"
+msgstr "Салон краси"
+
+#. module: beauty_salon
+#: model:ir.model,name:beauty_salon.model_beauty_salon_client
+msgid "Beauty Salon Client"
+msgstr "Клієнт"
+
+#. module: beauty_salon
+#: model:ir.model,name:beauty_salon.model_beauty_salon_client_visit
+msgid "Beauty Salon Client Visit"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model,name:beauty_salon.model_beauty_salon_employee
+msgid "Beauty Salon Employee"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model,name:beauty_salon.model_beauty_salon_employee_reschedule_wizard
+msgid "Beauty Salon Employee Reschedule Wizard"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model,name:beauty_salon.model_beauty_salon_employee_schedule
+msgid "Beauty Salon Employee Schedule"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model,name:beauty_salon.model_person_mixin
+msgid "Beauty Salon Person Mixin"
+msgstr ""
+
+#. module: beauty_salon
+#: model_terms:ir.ui.view,arch_db:beauty_salon.beauty_salon_employee_reschedule_wizard_form
+#: model_terms:ir.ui.view,arch_db:beauty_salon.client_visit_reschedule_wizard_form
+msgid "Cancel"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_client_visit_reschedule_wizard__cancel_visit
+msgid "Cancel Visit"
+msgstr ""
+
+#. module: beauty_salon
+#: code:addons/beauty_salon/wizard/client_visit_reschedule_wizard.py:0
+#, python-format
+msgid "Cannot reschedule or cancel the visit on the day of the appointment."
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client_visit__client_id
+msgid "Client"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client__birthday_date
+msgid "Client Birthday Date"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client__name
+msgid "Client Name"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee__passport_data
+msgid "Client Passport Data"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee__visit_ids
+#: model_terms:ir.ui.view,arch_db:beauty_salon.beauty_salon_client_visit_tree
+msgid "Client Visits"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.actions.act_window,name:beauty_salon.beauty_salon_client_act_window
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee__client_ids
+#: model:ir.ui.menu,name:beauty_salon.beauty_salon_client_menu
+msgid "Clients"
+msgstr ""
+
+#. module: beauty_salon
+#: model_terms:ir.ui.view,arch_db:beauty_salon.client_visit_reschedule_wizard_form
+msgid "Confirm"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_client_visit__state__confirmed
+msgid "Confirmed"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client__create_uid
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client_visit__create_uid
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee__create_uid
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_reschedule_wizard__create_uid
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_schedule__create_uid
+#: model:ir.model.fields,field_description:beauty_salon.field_client_visit_reschedule_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client__create_date
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client_visit__create_date
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee__create_date
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_reschedule_wizard__create_date
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_schedule__create_date
+#: model:ir.model.fields,field_description:beauty_salon.field_client_visit_reschedule_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: beauty_salon
+#: model_terms:ir.ui.view,arch_db:beauty_salon.beauty_salon_content_employee_schedule
+msgid "Date"
+msgstr ""
+
+#. module: beauty_salon
+#: model_terms:ir.ui.view,arch_db:beauty_salon.beauty_salon_content_employee_schedule
+msgid "Date:"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_schedule__day_of_week
+msgid "Day of the Week"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client__display_name
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client_visit__display_name
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee__display_name
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_reschedule_wizard__display_name
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_schedule__display_name
+#: model:ir.model.fields,field_description:beauty_salon.field_client_visit_reschedule_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_client_visit__state__done
+msgid "Done"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_client_visit__state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client__email
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee__email
+#: model:ir.model.fields,field_description:beauty_salon.field_person_mixin__email
+msgid "Email"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client__employee_id
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client_visit__employee_id
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_schedule__employee_id
+msgid "Employee"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee__name
+msgid "Employee Name"
+msgstr ""
+
+#. module: beauty_salon
+#: model_terms:ir.ui.view,arch_db:beauty_salon.employee_schedule_calendar
+msgid "Employee Schedule"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.actions.report,name:beauty_salon.action_report_employee_schedule
+#: model_terms:ir.ui.view,arch_db:beauty_salon.beauty_salon_content_employee_schedule
+msgid "Employee Schedule Report"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.actions.act_window,name:beauty_salon.action_employee_schedule_calendar
+#: model:ir.ui.menu,name:beauty_salon.menu_employee_schedule
+msgid "Employee Schedules"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.actions.act_window,name:beauty_salon.beauty_salon_employee_act_window
+#: model:ir.ui.menu,name:beauty_salon.beauty_salon_employee_menu
+msgid "Employees"
+msgstr ""
+
+#. module: beauty_salon
+#: model_terms:ir.ui.view,arch_db:beauty_salon.beauty_salon_content_employee_schedule
+msgid "End Time"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_employee_schedule__week_type__even
+msgid "Even"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_client__gender__female
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_employee__gender__female
+#: model:ir.model.fields.selection,name:beauty_salon.selection__person_mixin__gender__female
+msgid "Female"
+msgstr "Жінка"
+
+#. module: beauty_salon
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_employee_schedule__day_of_week__4
+msgid "Friday"
+msgstr "П'ятниця"
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client__gender
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee__gender
+#: model:ir.model.fields,field_description:beauty_salon.field_person_mixin__gender
+msgid "Gender"
+msgstr "Стать"
+
+#. module: beauty_salon
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_employee__specialty__hair_stylist
+msgid "Hair Stylist"
+msgstr "Перукар-стиліст"
+
+#. module: beauty_salon
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_client_visit__service_type__haircut
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_employee_schedule__service_type__haircut
+msgid "Haircut"
+msgstr "Стрижка"
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client__id
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client_visit__id
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee__id
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_reschedule_wizard__id
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_schedule__id
+#: model:ir.model.fields,field_description:beauty_salon.field_client_visit_reschedule_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client__image
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee__image
+#: model:ir.model.fields,field_description:beauty_salon.field_person_mixin__image
+msgid "Image"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_employee__role__intern
+msgid "Intern"
+msgstr "Інтерн"
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee__intern_ids
+#: model_terms:ir.ui.view,arch_db:beauty_salon.beauty_salon_employee_search
+msgid "Interns"
+msgstr "Інтерни"
+
+#. module: beauty_salon
+#: code:addons/beauty_salon/models/employee.py:0
+#, python-format
+msgid "Interns must have a mentor assigned."
+msgstr "Інтерну потрібно призначити ментора"
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client____last_update
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client_visit____last_update
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee____last_update
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_reschedule_wizard____last_update
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_schedule____last_update
+#: model:ir.model.fields,field_description:beauty_salon.field_client_visit_reschedule_wizard____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client__write_uid
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client_visit__write_uid
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee__write_uid
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_reschedule_wizard__write_uid
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_schedule__write_uid
+#: model:ir.model.fields,field_description:beauty_salon.field_client_visit_reschedule_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client__write_date
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client_visit__write_date
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee__write_date
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_reschedule_wizard__write_date
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_schedule__write_date
+#: model:ir.model.fields,field_description:beauty_salon.field_client_visit_reschedule_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_client_visit__service_type__makeup
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_employee_schedule__service_type__makeup
+msgid "Makeup"
+msgstr "Макіяж"
+
+#. module: beauty_salon
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_employee__specialty__makeup_artist
+msgid "Makeup Artist"
+msgstr "Візажист"
+
+#. module: beauty_salon
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_client__gender__male
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_employee__gender__male
+#: model:ir.model.fields.selection,name:beauty_salon.selection__person_mixin__gender__male
+msgid "Male"
+msgstr "Чоловік"
+
+#. module: beauty_salon
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_client_visit__service_type__massage
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_employee_schedule__service_type__massage
+msgid "Massage"
+msgstr "Повідомлення"
+
+#. module: beauty_salon
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_employee__specialty__massage_therapist
+msgid "Massage Therapist"
+msgstr "Масажист"
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee__mentor_id
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_employee__role__mentor
+msgid "Mentor"
+msgstr "Ментор"
+
+#. module: beauty_salon
+#: model_terms:ir.ui.view,arch_db:beauty_salon.beauty_salon_employee_search
+msgid "Mentors"
+msgstr "Ментори"
+
+#. module: beauty_salon
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_employee_schedule__day_of_week__0
+msgid "Monday"
+msgstr "Понеділок"
+
+#. module: beauty_salon
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_client_visit__service_type__nail_care
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_employee_schedule__service_type__nail_care
+msgid "Nail Care"
+msgstr "Догляд за нігтями"
+
+#. module: beauty_salon
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_employee__specialty__nail_technician
+msgid "Nail Technician"
+msgstr "Манікюр-майстер"
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_reschedule_wizard__new_date
+msgid "New Date"
+msgstr "Нова дата"
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_reschedule_wizard__new_employee_id
+#: model:ir.model.fields,field_description:beauty_salon.field_client_visit_reschedule_wizard__new_client_id
+#: model:ir.model.fields,field_description:beauty_salon.field_client_visit_reschedule_wizard__new_employee_id
+msgid "New Employee"
+msgstr "Новий прауівник"
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_reschedule_wizard__new_end_time
+#: model:ir.model.fields,field_description:beauty_salon.field_client_visit_reschedule_wizard__new_visit_end_time
+msgid "New End Time"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_reschedule_wizard__new_start_time
+#: model:ir.model.fields,field_description:beauty_salon.field_client_visit_reschedule_wizard__new_visit_start_time
+msgid "New Start Time"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_client_visit_reschedule_wizard__new_visit_date
+msgid "New Visit Date"
+msgstr "Нова дата візиту"
+
+#. module: beauty_salon
+#: code:addons/beauty_salon/models/visit.py:0
+#, python-format
+msgid "No work schedule available for the selected employee on this date."
+msgstr "Для вибраного працівника на цю дату немає доступного графіка роботи."
+
+#. module: beauty_salon
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_employee__role__none
+msgid "None"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_employee_schedule__week_type__odd
+msgid "Odd"
+msgstr "Непарний"
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_person_mixin__name
+msgid "Person Name"
+msgstr "Ім'я"
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client__phone
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee__phone
+#: model:ir.model.fields,field_description:beauty_salon.field_person_mixin__phone
+msgid "Phone"
+msgstr "Телефон"
+
+#. module: beauty_salon
+#: model_terms:ir.ui.view,arch_db:beauty_salon.beauty_salon_employee_reschedule_wizard_form
+#: model_terms:ir.ui.view,arch_db:beauty_salon.employee_schedule_tree
+msgid "Reschedule"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.actions.act_window,name:beauty_salon.action_reschedule_visit_wizard
+msgid "Reschedule Employee Working Time"
+msgstr "Зміна робочого часу працівника"
+
+#. module: beauty_salon
+#: model_terms:ir.ui.view,arch_db:beauty_salon.beauty_salon_client_visit_form
+msgid "Reschedule Visit"
+msgstr "Зміна часу візиту"
+
+#. module: beauty_salon
+#: code:addons/beauty_salon/models/employee_schedule.py:0
+#, python-format
+msgid "Reschedule Working Time"
+msgstr "Зміна робочого часу"
+
+#. module: beauty_salon
+#: model:ir.actions.act_window,name:beauty_salon.action_client_visit_reschedule_wizard
+#: model:ir.model,name:beauty_salon.model_client_visit_reschedule_wizard
+msgid "Reschedule or Cancel Client Visit"
+msgstr "Зміна або відміна візиту клієнта"
+
+#. module: beauty_salon
+#: code:addons/beauty_salon/models/visit.py:0
+#: model_terms:ir.ui.view,arch_db:beauty_salon.client_visit_reschedule_wizard_form
+#, python-format
+msgid "Reschedule or Cancel Visit"
+msgstr "Зміна або відміна візиту"
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee__role
+msgid "Role"
+msgstr "Роль"
+
+#. module: beauty_salon
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_employee_schedule__day_of_week__5
+msgid "Saturday"
+msgstr "Субота"
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_reschedule_wizard__schedule_id
+msgid "Schedule"
+msgstr "Графік"
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee__schedules_ids
+msgid "Schedules"
+msgstr "Графіки"
+
+#. module: beauty_salon
+#: model_terms:ir.ui.view,arch_db:beauty_salon.beauty_salon_content_employee_schedule
+msgid "Service"
+msgstr "Послуга"
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client_visit__service_type
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_schedule__service_type
+msgid "Service Type"
+msgstr "Тип послуг"
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee__specialty
+msgid "Specialty"
+msgstr "Спеціальність"
+
+#. module: beauty_salon
+#: model_terms:ir.ui.view,arch_db:beauty_salon.beauty_salon_content_employee_schedule
+msgid "Start Time"
+msgstr "Початок"
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client_visit__state
+msgid "Status"
+msgstr "Статус"
+
+#. module: beauty_salon
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_employee_schedule__day_of_week__6
+msgid "Sunday"
+msgstr "Неділя"
+
+#. module: beauty_salon
+#: code:addons/beauty_salon/models/visit.py:0
+#, python-format
+msgid "The visit time is outside the employee's working hours."
+msgstr "Час візиту – поза робочим часом працівника."
+
+#. module: beauty_salon
+#: code:addons/beauty_salon/models/visit.py:0
+#, python-format
+msgid "There is an overlapping client visit during the specified time."
+msgstr "На зазначений час вже заплановано візит"
+
+#. module: beauty_salon
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_employee_schedule__day_of_week__3
+msgid "Thursday"
+msgstr "Четвер"
+
+#. module: beauty_salon
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_employee_schedule__day_of_week__1
+msgid "Tuesday"
+msgstr "Вівторок"
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_client_visit_reschedule_wizard__visit_id
+msgid "Visit"
+msgstr "Візит"
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client__visit_count
+msgid "Visit Count"
+msgstr ""
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client_visit__visit_date
+msgid "Visit Date"
+msgstr "Дата візиту"
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client_visit__visit_end_time
+msgid "Visit End Time"
+msgstr "Кінець візиту"
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client_visit__visit_start_time
+msgid "Visit Start Time"
+msgstr "Початок візиту"
+
+#. module: beauty_salon
+#: model:ir.actions.act_window,name:beauty_salon.beauty_salon_client_visit_act_window
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_client__visit_ids
+#: model:ir.ui.menu,name:beauty_salon.beauty_salon_client_visit_menu
+msgid "Visits"
+msgstr "Візити"
+
+#. module: beauty_salon
+#: model:ir.model.fields.selection,name:beauty_salon.selection__beauty_salon_employee_schedule__day_of_week__2
+msgid "Wednesday"
+msgstr "Середа"
+
+#. module: beauty_salon
+#: model:ir.model.fields,field_description:beauty_salon.field_beauty_salon_employee_schedule__week_type
+msgid "Week Type"
+msgstr "Тип тижня"

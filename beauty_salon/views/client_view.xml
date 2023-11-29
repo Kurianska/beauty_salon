@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="beauty_salon_client_tree" model="ir.ui.view">
+        <field name="name">beauty.salon.client.tree</field>
+        <field name="model">beauty.salon.client</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="beauty_salon_client_form" model="ir.ui.view">
+        <field name="name">beauty.salon.client.form</field>
+        <field name="model">beauty.salon.client</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="image"/>
+                        <field name="gender"/>
+                        <field name="phone"/>
+                        <field name="email"/>
+                        <field name="address"/>
+                        <field name="birthday_date"/>
+                        <field name="employee_id" widget="many2one_tags"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="beauty_salon_client_act_window" model="ir.actions.act_window">
+        <field name="name">Clients</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">beauty.salon.client</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="beauty_salon_client_menu"
+              action="beauty_salon_client_act_window"
+              parent="beauty_salon_main_menu"
+              sequence="2"/>
+
+</odoo>

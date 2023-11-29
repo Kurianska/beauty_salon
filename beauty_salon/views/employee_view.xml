@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="beauty_salon_employee_tree" model="ir.ui.view">
+        <field name="name">beauty.salon.employee.tree</field>
+        <field name="model">beauty.salon.employee</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="beauty_salon_employee_form" model="ir.ui.view">
+        <field name="name">beauty.salon.employee.form</field>
+        <field name="model">beauty.salon.employee</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="image" class="oe_avatar"/>
+                        <field name="gender"/>
+                        <field name="phone"/>
+                        <field name="email"/>
+                        <field name="address"/>
+                        <field name="passport_data"/>
+                        <field name="specialty"/>
+                        <field name="client_ids" wiget="Many2many"/>
+                        <field name="role"/>
+                        <field name="mentor_id" attrs="{'invisible': [('role', '!=', 'intern')]}"/>
+                        <field name="intern_ids" attrs="{'invisible': [('role', '!=', 'mentor')]}" widget="many2many_tags"/>
+                        <field name="visit_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="beauty_salon_employee_kanban" model="ir.ui.view">
+        <field name="name">beauty.salon.employee.kanban</field>
+        <field name="model">beauty.salon.employee</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="specialty">
+                <field name="name"/>
+                <field name="specialty"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div class="oe_kanban_details">
+                                <div><field name="image"/></div>
+                                <div><h3><strong><field name="name"/></strong></h3></div>
+                                <div><strong>Specialty: </strong><field name="specialty"/></div>
+                                <div><strong>Clients: </strong><field name="client_ids"/></div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="beauty_salon_employee_search" model="ir.ui.view">
+        <field name="name">beauty.salon.employee.search</field>
+        <field name="model">beauty.salon.employee</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter string="Mentors" name="filter_mentors" domain="[('role', '=', 'mentor')]"/>
+                <filter string="Interns" name="filter_interns" domain="[('role', '=', 'intern')]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="beauty_salon_employee_act_window" model="ir.actions.act_window">
+        <field name="name">Employees</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">beauty.salon.employee</field>
+        <field name="view_mode">kanban,tree,form,search</field>
+    </record>
+
+    <menuitem id="beauty_salon_employee_menu"
+              action="beauty_salon_employee_act_window"
+              parent="beauty_salon_main_menu"
+              sequence="3"/>
+
+</odoo>
