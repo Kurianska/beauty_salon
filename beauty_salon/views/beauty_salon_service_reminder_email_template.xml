@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+        <record id="beauty_salon_visit_reminder_email_template" model="mail.template">
+            <field name="name">Beauty Salon Visit Reminder</field>
+            <field name="model_id" ref="beauty_salon.model_beauty_salon_client_visit"/>
+            <field name="subject">Reminder: Your upcoming appointment at Beauty Salon</field>
+            <field name="email_from">${object.company_id.email or ''}</field>
+            <field name="email_to">${object.client_id.email|safe}</field>
+            <field name="body_html">
+                <![CDATA[
+                <p>Hello ${object.client_id.name},</p>
+                <p>This is a reminder about your upcoming appointment at Beauty Salon.</p>
+                <p>Your appointment details:</p>
+                <ul>
+                    <li>Date: ${object.visit_date}</li>
+                    <li>Time: ${object.visit_start_time}</li>
+                    <li>Service: ${object.service_type}</li>
+                </ul>
+                <p>Please let us know if you need to reschedule or if you have any special requests for your visit.</p>
+                <p>Looking forward to seeing you,</p>
+                <p>The Beauty Salon Team</p>
+                ]]>
+            </field>
+        </record>
+
+</odoo>

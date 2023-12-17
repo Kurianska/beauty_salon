@@ -62,3 +62,21 @@ class Employee(models.Model):
             if record.role == 'intern' and not record.mentor_id:
                 raise exceptions.ValidationError(
                     _("Interns must have a mentor assigned."))
+
+    bonus = fields.Float(
+        compute="_compute_bonus",
+        store=True)
+
+    @api.depends('visit_ids')
+    def _compute_bonus(self):
+        for employee in self:
+            employee.bonus = sum(
+                visit.bonus_value
+                for visit in employee.visit_ids
+                if visit.state == 'done')
+
+    @api.model
+    def print_employee_visit_report(self, *args, **kwargs):
+        report = self.env.ref('beauty_salon.action_report_employee_visit')
+
+        return report.report_action(self)

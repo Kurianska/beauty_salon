@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 from odoo import models, fields, exceptions, api, _
 
 
@@ -34,6 +34,8 @@ class ClientVisit(models.Model):
         ('confirmed', 'Confirmed'),
         ('done', 'Done'),
     ], default='draft', string='Status')
+
+    bonus_value = fields.Float(default=10.0)
 
     @api.constrains('visit_date', 'visit_start_time',
                     'visit_end_time', 'employee_id')
@@ -116,3 +118,20 @@ class ClientVisit(models.Model):
                 'default_visit_id': self.id,
             },
         }
+
+    @api.model
+    def send_visit_reminders(self):
+        current_date = fields.Date.context_today(self)
+        reminder_date = current_date + timedelta(days=1)
+
+        visits_to_remind = self.search([
+            ('visit_date', '=', reminder_date),
+            ('state', '=', 'confirmed')
+        ])
+
+        reminder_template = self.env.ref(
+            'beauty_salon.beauty_salon_visit_reminder_email_template')
+
+        for visit in visits_to_remind:
+            if visit.client_id.email:
+                reminder_template.send_mail(visit.id, force_send=True)

@@ -17,6 +17,7 @@
         <field name="arch" type="xml">
             <form>
                 <header>
+                    <button string="Generate Employee Visits Report" type="object" name="print_employee_visit_report"/>
                 </header>
                 <sheet>
                     <group>
@@ -33,6 +34,7 @@
                         <field name="mentor_id" attrs="{'invisible': [('role', '!=', 'intern')]}"/>
                         <field name="intern_ids" attrs="{'invisible': [('role', '!=', 'mentor')]}" widget="many2many_tags"/>
                         <field name="visit_ids"/>
+                        <field name="bonus"/>
                     </group>
                 </sheet>
             </form>
@@ -53,7 +55,7 @@
                                 <div><field name="image"/></div>
                                 <div><h3><strong><field name="name"/></strong></h3></div>
                                 <div><strong>Specialty: </strong><field name="specialty"/></div>
-                                <div><strong>Clients: </strong><field name="client_ids"/></div>
+                                <div><strong>Clients: </strong><field name="client_ids" widget="many2many_tags"/></div>
                             </div>
                         </div>
                     </t>

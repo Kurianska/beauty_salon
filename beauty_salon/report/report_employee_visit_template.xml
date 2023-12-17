@@ -1,0 +1,38 @@
+<odoo>
+
+    <template id="beauty_salon_content_employee_visit">
+        <t t-call="web.external_layout">
+            <div class="page">
+                <h2>Visits Report: <t t-esc="doc.name"/></h2>
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Visit Data</th>
+                            <th>Client</th>
+                            <th>Service</th>
+                            <th>Bonus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="doc.visit_ids" t-as="visit">
+                            <tr>
+                                <td><t t-esc="visit.visit_date"/></td>
+                                <td><t t-esc="visit.client_id.name"/></td>
+                                <td><t t-esc="visit.service_type"/></td>
+                                <td><t t-esc="visit.bonus_value"/></td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </t>
+    </template>
+
+        <template id="beauty_salon_report_employee_visit">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="beauty_salon.beauty_salon_content_employee_visit"/>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -24,4 +24,13 @@
             <field name="print_report_name">'Employee Schedule - %s' % (object.employee_id.name)</field>
         </record>
 
+        <record id="action_report_employee_visit" model="ir.actions.report">
+            <field name="name">Employee Visit Report</field>
+            <field name="model">beauty.salon.employee</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">beauty_salon.beauty_salon_report_employee_visit</field>
+            <field name="report_file">beauty_salon.beauty_salon_report_employee_visit</field>
+            <field name="print_report_name">'Employee Visits - %s' % (object.name)</field>
+        </record>
+
 </odoo>

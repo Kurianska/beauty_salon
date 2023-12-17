@@ -76,3 +76,9 @@ class EmployeeSchedule(models.Model):
                 'form_view_initial_mode': 'edit',
             },
         }
+
+    @api.model
+    def print_employee_schedule_report(self, *args, **kwargs):
+        report = self.env.ref('beauty_salon.action_report_employee_schedule')
+
+        return report.report_action(self)

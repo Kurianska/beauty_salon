@@ -14,6 +14,7 @@
                 <field name="day_of_week"/>
                 <field name="week_type"/>
                 <button string="Reschedule" type="object" name="action_show_reschedule_wizard"/>
+                <button string="Print Schedule" type="object" name="print_employee_schedule_report"/>
             </tree>
         </field>
     </record>

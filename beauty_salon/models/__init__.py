@@ -4,4 +4,5 @@ from . import (
     employee,
     visit,
     employee_schedule,
+    service,
 )
